@@ -1,4 +1,4 @@
-package com.fayimora.mybank;
+package com.fayimora.accounts;
 
 import java.util.ArrayList;
 
@@ -11,7 +11,7 @@ public abstract class BankAccount {
 
     public static final double OVERDRAFT_FEE = 30;
 
-    public BankAccount(){
+    protected BankAccount(){
         mBalance = 0.0;
         mTransactions = new ArrayList<>();
     }
