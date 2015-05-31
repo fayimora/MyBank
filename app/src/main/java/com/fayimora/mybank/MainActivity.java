@@ -28,7 +28,7 @@ public class MainActivity extends ActionBarActivity {
         mWithdrawButton = (Button) findViewById(R.id.withdraw_button);
         mDepositButton = (Button) findViewById(R.id.deposit_button);
         mBalanceView = (TextView) findViewById(R.id.balance_view);
-        mCurrentAccount = new BankAccount();
+        mCurrentAccount = new SavingsAccount();
 
         Log.d(TAG, "Balance is " + mCurrentAccount.getBalance());
         mWithdrawButton.setOnClickListener(new View.OnClickListener() {

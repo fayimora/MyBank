@@ -5,7 +5,7 @@ import java.util.ArrayList;
 /**
  * Created by fayimora on 31/05/15.
  */
-public class BankAccount {
+public abstract class BankAccount {
     private double mBalance;
     private ArrayList<Double> mTransactions;
 
@@ -20,6 +20,14 @@ public class BankAccount {
         mTransactions.add(-amount);
         if(getBalance() < 0)
             mTransactions.add(-OVERDRAFT_FEE);
+    }
+
+    protected int numOfWithdrawals(){
+        int count = 0;
+        for(Double t: mTransactions)
+            if(t < 0.0)
+                count++;
+        return count;
     }
 
     public void deposit(double amount){
